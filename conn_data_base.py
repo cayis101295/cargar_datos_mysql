@@ -12,8 +12,9 @@ def connect_data_base():
     except Error as e:
         print("Error while connecting to MySQL", e)
 
-def create_data_base(conn):
+def create_data_base():
     try:
+        conn = mysql.connect(host='localhost', database='text_analysis', user='root', password='jisell123')
         cursor = conn.cursor()
         cursor.execute("CREATE DATABASE text_analysis")
         print("Database is created")
