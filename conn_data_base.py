@@ -5,7 +5,7 @@ from mysql.connector import Error
 def connect_data_base():
     try:
         conn = mysql.connect(host='localhost', user='root',  
-                            password='jisell123')#give ur username, password
+                            password='PASSWORD')#give ur username, password
         if conn.is_connected():
              print("Base de datos conectada")
              return conn
