@@ -56,12 +56,12 @@ def load_data_ufo(data):
             cursor.execute('DROP TABLE IF EXISTS UFO;')
             print('Creating table....')
     # in the below line please pass the create table statement which you want #to create
-            cursor.execute("CREATE TABLE UFO(level_0 INT,index INT,stats BLOB)")
+            cursor.execute("CREATE TABLE UFO(level_0 INT, stats BLOB)")
             print("Table is created....")
             #loop through the data frame
             for i,row in data.iterrows():
                 #here %S means string values 
-                sql = "INSERT INTO text_analysis.UFO VALUES (%s,%s,%s)"
+                sql = "INSERT INTO text_analysis.UFO VALUES (%s,%s)"
                 cursor.execute(sql, tuple(row))
                 print("Record inserted")
                 # the connection is not auto committed by default, so we must commit to save our changes
