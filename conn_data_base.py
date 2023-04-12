@@ -56,7 +56,7 @@ def load_data_ufo(data):
             cursor.execute('DROP TABLE IF EXISTS UFO;')
             print('Creating table....')
     # in the below line please pass the create table statement which you want #to create
-            cursor.execute("CREATE TABLE UFO(level_0 number,index number,stats BLOB)")
+            cursor.execute("CREATE TABLE UFO(level_0 INT,index INT,stats BLOB)")
             print("Table is created....")
             #loop through the data frame
             for i,row in data.iterrows():
